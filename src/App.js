@@ -1,9 +1,6 @@
 import React from 'react';
 import roll from './assets/img/XXL.jpeg'
 
-import Header from './Header';
-import Button from './Button';
-
 /*
 import trash from './assets/img/trash.svg'
 import plus from './assets/img/plus.svg'
@@ -14,28 +11,25 @@ import arrow_top from './assets/img/arrow-top.svg'
 */
 
 import './css/app.css';
+import {Header, Categories} from './components';
 
 
 function App() {
+
   return (
     <div className="wrapper">
     <Header />
-    <Button outline>432</Button>
-    <Button test></Button>
-
     <div className="content">
       <div className="container">
         <div className="content__top">
-          <div className="categories">
-            <ul>
-              <li className="active">Все</li>
-              <li>Горячие</li>
-              <li>Холодные</li>
-              <li>Запеченные</li>
-              <li>Суши</li>
-              <li>Сеты</li>
-            </ul>
-          </div>
+          <Categories onClickItem={(name) => console.log(name)}
+          items={[
+            'Горячие',
+            'Холодные',
+            'Запеченные',
+            'Суши',
+            'Сеты',
+          ]}/>
           <div className="sort">
             <div className="sort__label">
               <svg width="10" height="6" viewBox="0 0 10 6" fill="none" xmlns="http://www.w3.org/2000/svg">
