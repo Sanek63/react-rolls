@@ -18,7 +18,7 @@ class Categories extends React.Component{
     }
     
     render() {
-        const {items, onClickItem} = this.props;
+        const {items} = this.props;
         return (
             <div className="categories">
             <ul>
