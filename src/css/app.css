@@ -283,7 +283,7 @@ a {
 
 }
 .sort__label svg.rotated{
-    transform: rotate(180de);
+    transform: rotate(180deg);
 }
 
 .sort__label b {

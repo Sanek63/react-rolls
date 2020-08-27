@@ -16,12 +16,22 @@ import {Header} from './components';
 
 
 function App() {
+  
+  const [rolls, setRolls] = React.useState([]);
+
+  React.useEffect(() => {
+    fetch('http://localhost:3000/db.json')
+    .then((resp) => resp.json())
+    .then(json => {
+      setRolls(json.rolls);
+    });
+  }, []);
 
   return (
     <div className="wrapper">
     <Header />
     <div className="content">
-      <Route path="/" component={Home} exact />
+      <Route path="/" render={() => <Home items={rolls} />} exact />
       <Route path="/cart" component={Cart} exact />
     </div>
   </div>
