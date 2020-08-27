@@ -1,4 +1,5 @@
 import React from 'react'
+import PropTypes from 'prop-types';
 
 function RollBlock({ name, image, price, structure, content }) {
     return (
@@ -26,5 +27,19 @@ function RollBlock({ name, image, price, structure, content }) {
           </div>
     )
 }
+
+RollBlock.propTypes = {
+  name: PropTypes.string.isRequired,
+  image: PropTypes.string.isRequired,
+  price: PropTypes.number.isRequired,
+  content: PropTypes.string.isRequired,
+  category: PropTypes.number.isRequired,
+  rating: PropTypes.number.isRequired,
+
+  structure: PropTypes.shape({
+    count: PropTypes.number.isRequired,
+    weight: PropTypes.number.isRequired
+  })
+};
 
 export default RollBlock
