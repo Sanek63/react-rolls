@@ -39,7 +39,7 @@ RollBlock.propTypes = {
   structure: PropTypes.shape({
     count: PropTypes.number.isRequired,
     weight: PropTypes.number.isRequired
-  })
+  }).isRequired
 };
 
 export default RollBlock
